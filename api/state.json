@@ -11,7 +11,7 @@
     "type": "quiz",
     "transitions": {
       "type": "forced",
-      "next": "intro-quiz-1"
+      "next": "intro-quiz-0"
     },
     "correctAnswer": "left"
   }

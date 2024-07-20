@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- habilita caracteres especiales -->
+  <meta charset="utf-8">
+  <!-- estilo CSS -->
+  <link rel="stylesheet" href="https://joaquinterzano.github.io/The-Big-Quiz/styles.css">
+
+  <title>The Big Quiz</title>
+</head>
+
+<body>
+  <!-- audios que suenan cada vez que se realiza una transición -->
+  <audio class="transition-audio" id="0" src="https://joaquinterzano.github.io/The-Big-Quiz/assets/glitch-0.mp3"></audio>
+  <audio class="transition-audio" id="1" src="https://joaquinterzano.github.io/The-Big-Quiz/assets/glitch-1.mp3"></audio>
+  <!-- audios que suenan cuando se acierta o se falla una pregunta -->
+  <audio class="quiz-audio" id="correct" src="https://joaquinterzano.github.io/The-Big-Quiz/assets/right-yay.mp3"></audio>
+  <audio class="quiz-audio" id="incorrect" src="https://joaquinterzano.github.io/The-Big-Quiz/assets/wrong-buzzer.mp3"></audio>
+  <!-- contenedor con la pantalla del juego -->
+  <div id="screen" class="container">
+    <img id="background-image">
+    <div id="description" class="pixelated"></div>
+    <button id="leftOption", class="pixelated option" onclick="master.onLeftOption()"></button>
+    <button id="rightOption", class="pixelated option" onclick="master.onRightOption()"></button>
+  </div>
+  <!-- librería jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <!-- módulos de las clases -->
+  <script src="https://joaquinterzano.github.io/The-Big-Quiz/Facade.js"></script>
+  <!-- lógica principal Javascript -->
+  <script>
+    // sos vos, maestro
+    const master = new Facade()
+    // lista con los objetos <screen> que están en el Jason
+    var screens, states
+    // actualiza los componentes de la pantalla
+    var update = function (screenID) {
+      let node = screens.find(obj => obj.id == screenID);
+      $("#background-image").attr("src", "https://joaquinterzano.github.io/The-Big-Quiz/assets/" + node.image);
+      $("#description").html(node.description);
+      $("#leftOption").html(node.leftOption);
+      $("#rightOption").html(node.rightOption);
+    };
+    // inicializa todines cuando se carga la página
+    $(document).ready(function () {
+      $.getJSON("https://joaquinterzano.github.io/The-Big-Quiz/api/screen.json", function (data) {
+        screens = data;
+        update("intro-quiz-0");
+      });
+      $.getJSON("https://joaquinterzano.github.io/The-Big-Quiz/api/state.json", function (data) {
+        states = data;
+        master.changeState(states["intro-quiz-0"]);
+      });
+    });
+  </script>
+
+</body>
+
+</html>

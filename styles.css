@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+
+
+body {
+  background-color: rgb(10, 10, 10);
+}
+
+#screen {
+  /* Fija el contenedor en una posición
+     Fija las compenentes en posiciones relativas al contenedor */
+  position: fixed;
+  /* Fija el tamaño del contenedor */
+  max-width: 40%;
+  /* Centra el contenedor */
+  margin: 3% 30%;
+  border: 6px ridge rgb(150, 150, 150);
+}
+
+#background-image {
+  /* Fija el tamaño de la imagen en el tamaño del ancho del contenedor */
+  max-width: 100%;
+}
+
+#description {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  left: 2%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #f1f1f1;
+  padding: 1%;
+  border: none;
+}
+/* pixelated font */
+.pixelated {
+  font-family: "Pixelify Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color:#fff;
+  font-size: 120%;
+}
+/* option buttons */
+.option {
+  position: absolute;
+  bottom: 2%;
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  color: #f1f1f1;
+  max-width: 41%;
+  padding: 1%;
+  border: none;
+  transition-duration: 0.25s;
+}
+.option:hover {
+  background: rgba(200, 200, 200, 0.8);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+}
+#leftOption {
+  left: 2%;
+}
+#rightOption {
+  right: 2%;
+}
