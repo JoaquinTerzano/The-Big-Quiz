@@ -1,0 +1,18 @@
+{
+  "intro-quiz-0": {
+    "type": "quiz",
+    "transitions": { 
+      "type": "forced", 
+      "next": "intro-quiz-1" 
+    }, 
+    "correctAnswer": "left"
+    },
+  "intro-quiz-1": {
+    "type": "quiz",
+    "transitions": {
+      "type": "forced",
+      "next": "intro-quiz-1"
+    },
+    "correctAnswer": "left"
+  }
+}
