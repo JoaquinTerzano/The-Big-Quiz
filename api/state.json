@@ -13,6 +13,93 @@
       "type": "forced",
       "next": "intro-quiz-0"
     },
+    "correctAnswer": "right"
+  },
+  "intro-quiz-2": {
+    "type": "quiz",
+    "transitions": {
+      "type": "forced",
+      "next": "intro-quiz-3"
+    },
     "correctAnswer": "left"
+  },
+  "intro-quiz-3": {
+    "type": "quiz",
+    "transitions": {
+      "type": "forced",
+      "next": "intro-quiz-4"
+    },
+    "correctAnswer": "right"
+  },
+  "intro-quiz-4": {
+    "type": "quiz",
+    "transitions": {
+      "type": "forced",
+      "next": "intro-quiz-5"
+    },
+    "correctAnswer": "right"
+  },
+  "intro-quiz-5": {
+    "type": "quiz",
+    "transitions": {
+      "type": "forced",
+      "next": "intro-quiz-6"
+    },
+    "correctAnswer": "right"
+  },
+  "intro-quiz-6": {
+    "type": "quiz",
+    "transitions": {
+      "type": "scoreBased",
+      "0": "intro-resultado-0",
+      "1": "intro-resultado-1",
+      "2": "intro-resultado-2",
+      "3": "intro-resultado-2",
+      "4": "intro-resultado-2",
+      "5": "intro-resultado-3",
+      "6": "intro-resultado-3",
+      "7": "intro-resultado-4"
+    },
+    "correctAnswer": "left"
+  },
+  "intro-resultado-0": {
+    "type": "quiz",
+    "transitions": {
+      "type": "forced",
+      "next": "intro-quiz-0"
+    },
+    "correctAnswer": "right"
+  },
+  "intro-resultado-1": {
+    "type": "quiz",
+    "transitions": {
+      "type": "forced",
+      "next": "intro-quiz-0"
+    },
+    "correctAnswer": "right"
+  },
+  "intro-resultado-2": {
+    "type": "quiz",
+    "transitions": {
+      "type": "forced",
+      "next": "intro-quiz-0"
+    },
+    "correctAnswer": "right"
+  },
+  "intro-resultado-3": {
+    "type": "quiz",
+    "transitions": {
+      "type": "forced",
+      "next": "intro-quiz-0"
+    },
+    "correctAnswer": "right"
+  },
+  "intro-resultado-4": {
+    "type": "quiz",
+    "transitions": {
+      "type": "forced",
+      "next": "intro-quiz-0"
+    },
+    "correctAnswer": "right"
   }
 }
